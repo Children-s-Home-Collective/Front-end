@@ -1,13 +1,13 @@
-const reportWebVitals = onPerfEntry => {
-  if (onPerfEntry && onPerfEntry instanceof Function) {
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      getCLS(onPerfEntry);
-      getFID(onPerfEntry);
-      getFCP(onPerfEntry);
-      getLCP(onPerfEntry);
-      getTTFB(onPerfEntry);
-    });
-  }
-};
+import React from 'react'
 
-export default reportWebVitals;
+function reportWebVitals() {
+  return (
+    <div>
+      <div className='Row1'>
+        <img src='https://img.icons8.com/?size=64&id=NzaHJt0XKIWl&format=png'></img>
+      </div>
+    </div>
+  )
+}
+
+export default reportWebVitals
