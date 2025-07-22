@@ -1,82 +1,38 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  background: #f0f2fa;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background: white;
-  border-bottom: 1px solid #ddd;
-}
-
-.logo {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-}
-
-nav a.active {
-  background: #ddd;
-  padding: 5px 8px;
-  border-radius: 5px;
-}
-
-.avatar {
-  width: 35px;
-  height: 35px;
-  background: #ffe1cc;
-  border-radius: 50%;
-}
-
-.main-content {
+.App {
   text-align: center;
-  padding: 30px 15px;
 }
 
-.program {
-  background: #eaeaff;
-  border-radius: 15px;
-  padding: 20px;
-  margin: 20px auto;
-  display: flex;
-  max-width: 850px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  gap: 20px;
-  align-items: center;
-  justify-content: space-between;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-.program-image img {
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-.program-text {
-  flex: 2;
-  text-align: left;
-}
-
-.program-image {
-  flex: 1;
-}
-
-@media (max-width: 768px) {
-  .program {
-    flex-direction: column;
-    text-align: center;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
   }
+}
 
-  .program-text {
-    text-align: center;
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
