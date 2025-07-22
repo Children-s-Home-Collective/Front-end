@@ -1,4 +1,4 @@
-.mypage{
+.mypage,.volunteer{
   background-color: #EEECFB;
 }
 
@@ -134,3 +134,64 @@ footer{
 .trademark img{
   width: 23px;
 }
+.volunteerbox{
+  border: 2px solid black;
+  margin: 10px 90px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.8;
+  font-size: larger;
+  border-radius: 24px;
+
+}
+.volunteerright{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 25px;
+  align-items: center;
+  margin: 15px 30px;
+  text-align: center;
+}
+.notice,button{
+  background-color: #8D88DD;
+  border-radius: 25px;
+  border: 2px solid #EEECFB ;
+  width: 200px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.notice{
+  margin: 10px 0px;
+}
+
+input{
+  margin: 20px 10px ;
+  width:200px ;
+  height: 40px;
+  border-radius: 25px;
+  border: 2px solid #EEECFB ;
+  word-wrap: break-word;
+}
+
+.last2,.last{
+  height: 100px;
+}
+
+button{
+   margin: 10px;
+   font-size: 20px;
+}
+
+.volunteerleft h3{
+  text-align: center;
+  color: #191599;
+}
+.volunteerleft{
+  margin: 20px 10px;
+}
+
+

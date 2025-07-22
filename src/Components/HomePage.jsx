@@ -1,20 +1,11 @@
 import React from 'react'
 import Navigationbar from './Navigationbar'
+import Header from './Header'
 
 function HomePage() {
   return (
     <div className='mypage'>
-        <header >
-         <div className='row1'>
-            <div className='left'>
-                <img src='https://img.icons8.com/?size=64&id=NzaHJt0XKIWl&format=png'></img>
-                <p>The Children's Home Collective</p>
-            </div>
-        
-        <Navigationbar />
-        <img src='https://img.icons8.com/?size=80&id=108652&format=png' alt='user image'></img>
-        </div>
-        </header>
+        <Header />
         <div className='content1'>
             <div className='line1'>
                 <div className="paragraph">
