@@ -193,5 +193,41 @@ button{
 .volunteerleft{
   margin: 20px 10px;
 }
+.childparagraph{
+  text-align: center;
+}
+.homes{
+  display: flex;
+  justify-content:space-around;
+  flex-wrap: wrap;
+  width: 1400px;
+  margin: 20px 200px;
+}
+.singlehome{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 10px 0px 15px 0px;
+  border: 2px solid black;
+  border-radius: 25px;
 
+}
+.singlehome img{
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.location img{
+  width: 30px;
+  height:30px ;
+}
+.location{
+  display: flex;
+  align-items: center;
+}
+.details h4,.location{
+  margin: 0px;
+}
+.details p{
+  text-align: center;
+}
 
