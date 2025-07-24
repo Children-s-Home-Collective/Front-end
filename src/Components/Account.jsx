@@ -21,7 +21,7 @@ function Account() {
     <div className="account-container">
       <div className="leftsetting">
         <ul>
-          <li><Link to="/">Back to home page</Link></li>
+          <li><Link to="/homepage">Back to home page</Link></li>
           <li onClick={() => setActiveSection('Profile')}><img src='https://img.icons8.com/?size=48&id=20750&format=png' />Profile</li>
           <li onClick={() => setActiveSection('Logout')}><img src='https://img.icons8.com/?size=80&id=110469&format=png' />Logout</li>
         </ul>

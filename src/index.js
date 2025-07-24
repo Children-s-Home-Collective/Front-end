@@ -8,13 +8,19 @@ import ProgrammesPage from './Components/ProgrammesPage';
 import VolunteerPage from './Components/VolunteerPage';
 import Childrenshomes from './Components/Childrenshomes';
 import Account from './Components/Account';
+import LoginPage from './Components/LoginPage';
 
 
 const router= createBrowserRouter([
   {
     path:"/",
+    element:<LoginPage />
+  },
+  {
+    path:"/homepage",
     element:<App />
-  },{
+  },
+  {
     path:"/programs",
     element:<ProgrammesPage />
   },
