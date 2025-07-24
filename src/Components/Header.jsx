@@ -32,7 +32,6 @@ function Header() {
         <button onClick={toggleMenu}><img src='https://img.icons8.com/?size=80&id=108652&format=png' alt='user image'/></button>
         {open && (
         <div className="dropdown-menu">
-          <Link to="/">Home</Link>
           <Link to="/account">Account</Link>
         </div>
       )}

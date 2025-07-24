@@ -267,3 +267,121 @@ em{
 .dropdown-menu a:hover {
   text-decoration: underline;
 }
+
+
+.account-container {
+  display: flex;
+  height: 100vh; 
+  width: 100%;
+}
+
+.leftsetting {
+  width: 25%;
+  background-color:#BFC2FA;
+  padding: 20px;
+}
+
+.leftsetting ul {
+  list-style: none;
+  padding: 0;
+}
+
+.leftsetting li {
+  margin-bottom: 15px;
+  cursor: pointer;
+  color: #333;
+}
+
+.leftsetting li:hover {
+  text-decoration: underline;
+}
+
+.rightsetting {
+  width: 75%;
+  background-color:#8D88DD;
+  padding: 20px;
+}
+.rightsetting h2{
+  text-align: center;
+}
+.leftsetting a{
+    display: flex;
+    align-items: center;
+}
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  width: 900px;
+  height: 750px;
+  text-align: center;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.email, .location {
+  font-size: 19px;
+  margin: 4px 0;
+}
+
+.bio {
+  font-size: 19px;
+  margin-top: 15px;
+}
+
+.edit-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+}
+.inner{
+  display: flex;
+  text-align: center;
+}
+.main-logout{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.logout-btn {
+  padding: 8px 16px;
+  background-color: #0056b3;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #5038ED;
+}
+.leftsetting li{
+  display: flex;
+  align-items: center;
+}
+
