@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ProgrammesPage from './Components/ProgrammesPage';
 import VolunteerPage from './Components/VolunteerPage';
 import Childrenshomes from './Components/Childrenshomes';
+import Account from './Components/Account';
 
 
 const router= createBrowserRouter([
@@ -24,6 +25,9 @@ const router= createBrowserRouter([
   {
     path:"/children's homes",
     element:<Childrenshomes />
+  },{
+    path:"/account",
+    element:<Account />
   }
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));

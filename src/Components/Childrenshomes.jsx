@@ -58,6 +58,7 @@ function Childrenshomes() {
               </section>
               <p>{dats.description}</p>
             </div>
+            <button>View more details<img src='https://img.icons8.com/?size=64&id=S6Q4NFBbHlSg&format=png'/></button>
           </div>
         )}
       </div>
