@@ -459,3 +459,93 @@ em{
   align-items: center;
 }
 
+.programs,.subheading2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.2;
+}
+.heading1,.heading2{
+  display: flex;
+}
+.heading2 img{
+  width: 300px;
+  height: 200px;
+}
+.education, .nutrition , .family,.guidance{
+  background-color: #BFC2FA;
+  border-radius: 25px;
+  margin: 10px 0px;
+  width: 900px;
+}
+.shortdescription{
+  text-align: center;
+}
+.home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.homebackground{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
+}
+.homebackground p{
+  margin: 2px;
+}
+.homebackground img{
+  width: 20px;
+}
+.homecontent1 ul{
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0; 
+  gap: 20px;
+  cursor: pointer;
+  border: 2px solid black;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding: 30px;
+}
+.visit,.donate,.aboutus,.gallery{
+  background-color: #BFC2FA;
+  width: 1000px;
+  height: 300px;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 30px 0px;
+  border: 2px solid black;
+}
+.visit1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.1;
+}
+.visitform{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.visit button{
+  margin: 0px 400px;
+}
+.donate{
+  display: flex;
+  flex-direction: column;
+  line-height: 0.1;
+  align-items: center;
+}
+.donate img{
+  width: 40px;
+  height: 50px;
+}
+.donate button{
+  margin: 0px ;
+}

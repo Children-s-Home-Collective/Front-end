@@ -9,6 +9,10 @@ import VolunteerPage from './Components/VolunteerPage';
 import Childrenshomes from './Components/Childrenshomes';
 import Account from './Components/Account';
 import LoginPage from './Components/LoginPage';
+import { Provider } from 'react-redux';
+import { store,persistor } from './Components/app/store';
+import HomeDetails from './Components/HomeDetails';
+import { PersistGate } from 'redux-persist/integration/react';
 
 
 const router= createBrowserRouter([
@@ -21,7 +25,7 @@ const router= createBrowserRouter([
     element:<App />
   },
   {
-    path:"/programs",
+    path:"/programmes",
     element:<ProgrammesPage />
   },
   {
@@ -34,12 +38,21 @@ const router= createBrowserRouter([
   },{
     path:"/account",
     element:<Account />
+  },
+  {
+    path:"/homedetails",
+    element:<HomeDetails />
   }
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <RouterProvider router={router} />
+      </PersistGate>
+    </Provider>
+   
   </React.StrictMode>
 );
 

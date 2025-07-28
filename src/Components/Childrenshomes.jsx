@@ -1,7 +1,12 @@
 import React from 'react'
 import Header from './Header'
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { setSelectedHome } from './features/childHomeSlice';
 
 function Childrenshomes() {
+   const dispatch = useDispatch();
+   const navigate = useNavigate();
    const data=[
     {
       image:"https://images.unsplash.com/photo-1540479859555-17af45c78602?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpbGRyZW58ZW58MHwwfDB8fHww",
@@ -34,6 +39,10 @@ function Childrenshomes() {
       description:"Building bridges to brighter futures. Our innovative programs help children overcome challenges and............"
     }
   ]
+  const handleViewDetails = (home) => {
+    dispatch(setSelectedHome(home));
+    navigate('/homedetails');
+  };
   return (
     <div>
       <Header />
@@ -58,7 +67,7 @@ function Childrenshomes() {
               </section>
               <p>{dats.description}</p>
             </div>
-            <button>View more details<img src='https://img.icons8.com/?size=64&id=S6Q4NFBbHlSg&format=png'/></button>
+            <button onClick={() => handleViewDetails(dats)}>View more details<img src='https://img.icons8.com/?size=64&id=S6Q4NFBbHlSg&format=png'/></button>
           </div>
         )}
       </div>
