@@ -11,11 +11,10 @@ function ProgrammesPage() {
         <p>We offer comprehensive programs designed to meet each child's unique needs and support their journey toward healing and growth.</p>
         </div>
         <div className='education'>
-            <div className='heading12'>
                 <div className='heading1'>
                  <img src='https://img.icons8.com/?size=50&id=41414&format=png' />
                  <h4>Education</h4>
-            </div>   
+                 </div>   
             <div className='heading2'>
                 <div className='subheading2'>
                     <p>We offer Comprehensive educational programs, tutoring, and academic support for all ages.</p>
@@ -27,8 +26,8 @@ function ProgrammesPage() {
                 </ul>
                 </div>
                 <img src='https://images.unsplash.com/photo-1607823477522-177cff8183d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNoaWxkcmVuJTIwcmVhZGluZyUyMGJvb2tzfGVufDB8MHwwfHx8MA%3D%3D' />
-            </div>         
 
+                </div>
         </div>
         <div className='nutrition'>
            <div className='heading12'>
@@ -105,7 +104,7 @@ function ProgrammesPage() {
                 <img src='https://media.istockphoto.com/id/1432916936/photo/female-psychologist-counseling-teenage-boy-in-office.webp?a=1&b=1&s=612x612&w=0&k=20&c=aVivRGshg5twR0GRGjhy99Ko_8FZWXyixEDe48a4s10=' />
 
         </div>
-        </div>
+    </div>
     </div>
 
   )
