@@ -1,8 +1,82 @@
-.mypage,.volunteer{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Rammetto+One&display=swap');
+
+
+
+body, .dropdown button{
   background-color: #EEECFB;
 }
 
+.login{
+  margin: 0px;
+  font-family: "Rammetto One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.loginpage-header{
+  text-align: center;
+  font-size: larger;
+}
+.loginpage-icons{
+  display: flex;
+  justify-content: space-around;
 
+}
+.loginblock{
+  width: 400px;
+  margin: 0px 40px;
+}
+.loginimage p{
+  color: white;
+  width: 100px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  line-height: 1.7;
+  font-size: large;
+  margin: 50px 40px ;
+}
+.loginform h2,.loginform p{
+    text-align: center;
+}
+.logincard{
+  border: 2px solid black;
+  width: 900px;
+  height: 410px;
+  display: flex;
+  justify-content: center;
+  margin: 20px auto ;
+}
+.choose-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.features{
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 90px;
+  text-align: center;
+}
+.loginimage{
+  flex: 1;
+  height: 100%;
+  background-image: url("https://images.unsplash.com/photo-1578357078586-491adf1aa5ba?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGVscHxlbnwwfDF8MHx8fDA%3D");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.loginform {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  align-items: center;
+}
+form{
+  display: flex;
+  flex-direction: column;
+}
 .row1,.left{
   display: flex;
   justify-content: space-between;
@@ -27,14 +101,16 @@ a:hover{
 }
 
 .content1{
-  margin: 30px 350px;
+  margin: 30px 250px;
   padding: 0px 100px;
   width: 1100px;
-  height: 600px;
-  background-image: url("./Images/content1.avif");
+  height: 700px;
+  background-image: url("https://plus.unsplash.com/premium_photo-1667113478918-cfef93399991?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzc0fHxwdXJwbGV8ZW58MHwwfDB8fHww");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  color:#EEECFB;
+  border-radius: 25px;
 }
 .line2 img{
   margin: 0px 0px 20px 0px;
@@ -43,7 +119,9 @@ a:hover{
 .line1,.line2{
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin: 0px 160px; 
+  font-size: larger;
 }
 .imageline1,.line2 img{
   width: 350px;
@@ -108,6 +186,7 @@ a:hover{
 .subcontent5{
   display: flex;
   justify-content: space-around;
+  margin: 20px 0px;
 }
 .content5 h1{
    margin: 70px 750px 40px 750px;
@@ -230,4 +309,243 @@ button{
 .details p{
   text-align: center;
 }
+em{
+  color: #5038ED;
+}
+.singlehome button{
+  width: 300px;
+  margin: 10px 80px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%; 
+  left: 0;  
+  background-color: #D4CDF4;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 150px;
+  margin-top: 8px; 
+}
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+}
 
+.dropdown-menu a:hover {
+  text-decoration: underline;
+}
+
+
+.account-container {
+  display: flex;
+  height: 100vh; 
+  width: 100%;
+}
+
+.leftsetting {
+  width: 25%;
+  background-color:#BFC2FA;
+  padding: 20px;
+}
+
+.leftsetting ul {
+  list-style: none;
+  padding: 0;
+}
+
+.leftsetting li {
+  margin-bottom: 15px;
+  cursor: pointer;
+  color: #333;
+}
+
+.leftsetting li:hover {
+  text-decoration: underline;
+}
+
+.rightsetting {
+  width: 75%;
+  background-color:#8D88DD;
+  padding: 20px;
+}
+.rightsetting h2{
+  text-align: center;
+}
+.leftsetting a{
+    display: flex;
+    align-items: center;
+}
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  width: 900px;
+  height: 750px;
+  text-align: center;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.email, .location {
+  font-size: 19px;
+  margin: 4px 0;
+}
+
+.bio {
+  font-size: 19px;
+  margin-top: 15px;
+}
+
+.edit-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+}
+.inner{
+  display: flex;
+  text-align: center;
+}
+.main-logout{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.logout-btn {
+  padding: 8px 16px;
+  background-color: #0056b3;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #5038ED;
+}
+.leftsetting li{
+  display: flex;
+  align-items: center;
+}
+
+.programs,.subheading2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.2;
+}
+.heading1,.heading2{
+  display: flex;
+}
+.heading2 img{
+  width: 300px;
+  height: 200px;
+}
+.education, .nutrition , .family,.guidance{
+  background-color: #BFC2FA;
+  border-radius: 25px;
+  margin: 10px 0px;
+  width: 900px;
+}
+.shortdescription{
+  text-align: center;
+}
+.home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.homebackground{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
+}
+.homebackground p{
+  margin: 2px;
+}
+.homebackground img{
+  width: 20px;
+}
+.homecontent1 ul{
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0; 
+  gap: 20px;
+  cursor: pointer;
+  border: 2px solid black;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding: 30px;
+}
+.visit,.donate,.aboutus,.gallery{
+  background-color: #BFC2FA;
+  width: 1000px;
+  height: 300px;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 30px 0px;
+  border: 2px solid black;
+}
+.visit1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.1;
+}
+.visitform{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.visit button{
+  margin: 0px 400px;
+}
+.donate{
+  display: flex;
+  flex-direction: column;
+  line-height: 0.1;
+  align-items: center;
+}
+.donate img{
+  width: 40px;
+  height: 50px;
+}
+.donate button{
+  margin: 0px ;
+}
