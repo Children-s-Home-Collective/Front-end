@@ -1,98 +1,100 @@
-import React from 'react';
-
-const programData = [
-  {
-    title: 'Education',
-    description: 'We offer comprehensive educational programs, tutoring, and academic support for all ages.',
-    points: [
-      'Academic tutoring',
-      'Life skills training',
-      'Vocational programs',
-      'College preparation',
-    ],
-    icon: '🎓',
-    image: 'https://cdn.pixabay.com/photo/2017/02/14/11/07/comic-book-2065075_1280.jpg',
-    bgColor: 'bg-indigo-100',
-  },
-  {
-    title: 'Nutrition & Health',
-    description: 'We provide meals, health checkups, and hygiene education to ensure every child thrives.',
-    points: [
-      'Nutritious meals daily',
-      'Regular health checkups',
-      'Hygiene education',
-    ],
-    icon: '🥗',
-    image: 'https://cdn.pixabay.com/photo/2017/05/15/08/28/ultrasound-2319943_1280.jpg',
-    bgColor: 'bg-purple-100',
-  },
-  {
-    title: 'Family Reunification',
-    description: 'Supporting families to safely reunite when possible, with ongoing support services.',
-    points: [
-      'Family counseling',
-      'Parenting classes',
-      'Transition support',
-      'Follow-up services',
-    ],
-    icon: '👨‍👩‍👧‍👦',
-    image: 'https://cdn.pixabay.com/photo/2016/11/21/15/46/sunset-1846227_1280.jpg',
-    bgColor: 'bg-orange-100',
-  },
-  {
-    title: 'Counseling & Guiding',
-    description: 'Licensed counselors helping kids heal from trauma, build confidence, and plan for the future.',
-    points: [
-      'One-on-one therapy',
-      'Group sessions',
-      'Mental health workshops',
-    ],
-    icon: '🧠',
-    image: 'https://cdn.pixabay.com/photo/2020/05/22/12/47/psychology-5201487_1280.jpg',
-    bgColor: 'bg-violet-200',
-  },
-];
+import React from 'react'
+import Header from './Header'
 
 function ProgrammesPage() {
   return (
-    <div className="py-10 px-4 md:px-16 bg-gray-50">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-semibold text-gray-800">Our Programs</h2>
-        <p className="mt-2 text-gray-600 max-w-2xl mx-auto">
-          We offer tailored programs to help children grow emotionally, mentally, and socially.
-        </p>
-      </div>
-
-      <div className="space-y-10">
-        {programData.map((program, index) => (
-          <div
-            key={index}
-            className={`rounded-xl flex flex-col md:flex-row justify-between items-center p-6 shadow-md ${program.bgColor}`}
-          >
-            <div className="md:w-2/3 w-full">
-              <h3 className="text-xl font-bold mb-2 flex items-center gap-2 text-gray-800">
-                <span className="text-2xl">{program.icon}</span> {program.title}
-              </h3>
-              <p className="text-gray-700 mb-2">{program.description}</p>
-              <ul className="list-disc list-inside text-gray-700 space-y-1 pl-2">
-                {program.points.map((point, i) => (
-                  <li key={i}>{point}</li>
-                ))}
-              </ul>
+    <div>
+        <Header />
+        <div className='programs'>
+        <div className='shortdescription'>
+        <h4>Our programs</h4>
+        <p>We offer comprehensive programs designed to meet each child's unique needs and support their journey toward healing and growth.</p>
+        </div>
+        <div className='education'>
+            <div className='heading1'>
+                 <img src='https://img.icons8.com/?size=50&id=41414&format=png' />
+                 <h4>Education</h4>
+            </div>
+            <div className='heading2'>
+                <div className='subheading2'>
+                    <p>We offer Comprehensive educational programs, tutoring, and academic support for all ages.</p>
+                <ul>
+                    <li>Academic tutoring</li>
+                    <li>Lifeskills training</li>
+                    <li>Vocational programs</li>
+                    <li>College</li>
+                </ul>
+                </div>
+                <img src='https://images.unsplash.com/photo-1607823477522-177cff8183d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNoaWxkcmVuJTIwcmVhZGluZyUyMGJvb2tzfGVufDB8MHwwfHx8MA%3D%3D' />
+            </div>
+        </div>
+        <div className='nutrition'>
+            <div className='heading1'>
+                 <img src='https://img.icons8.com/?size=50&id=9731&format=png' />
+                 <h4>Nutriton & health</h4>
+            </div>
+            <div className='heading2'>
+                <div className='subheading2'>
+                <p>Our Health & Nutrition Program ensures that every child receives balanced meals and proper healthcare.</p>
+                <p>The program is  designed to support the physical and mental development of children in a safe and nurturing environment</p>
+                <p>It includes</p>
+                <ul>
+                    <li>Regular health check ups</li>
+                    <li>Nutricious meal planning</li>
+                    <li>Growth monitoring</li>
+                    <li>Education on healthy habits</li>
+                </ul>
+                </div>
+                <img src='https://plus.unsplash.com/premium_photo-1661265882566-3138962f933d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODF8fGNoaWxkcmVuJTIwcmVjZWl2aW5nJTIwaGVhbHRoJTIwY2FyZXxlbnwwfDB8MHx8fDA%3D' />
             </div>
 
-            <div className="md:w-1/3 w-full mt-6 md:mt-0 md:pl-6">
-              <img
-                src={program.image}
-                alt={program.title}
-                className="w-full h-56 object-cover rounded-md"
-              />
-            </div>
-          </div>
-        ))}
-      </div>
     </div>
-  );
+     <div className='family'>
+        <div className='heading1'>
+             <img src='https://img.icons8.com/?size=50&id=8902&format=png' />
+             <h4>Family Reunification</h4>
+        </div>   
+        <div className='heading2'>
+            <div className='subheading2'>
+            <p>Supporting families to safely reunite when possible, with ongoing support services.</p>
+            <p>We work closely with both the child and their family to rebuild relationships and create a stable, supportive home environment.</p>
+            <p>Key activities include</p>
+            <ul>
+                <li>Family assessment</li>
+                <li>Parent support & counselling</li>
+                <li>Supervised visits</li>
+                <li>Child preparation</li>
+            </ul>
+            </div>
+
+            <img src='https://images.unsplash.com/photo-1529180979161-06b8b6d6f2be?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGZhbWlseXxlbnwwfDB8MHx8fDA%3D' />
+        </div>
+
+    </div>
+    <div className='guidance'>
+        <div className='heading1'>
+             <img src='https://img.icons8.com/?size=80&id=AM5Js7op4Qct&format=png' />
+             <h4>Counselling and Guiding</h4>
+        </div>   
+        <div className='heading2'>
+            <div className='subheading2'>
+            <p>Connect with licensed mental health professionals who specialize in supporting children and families.</p>
+            <p>Our comprehensive counseling program provides expert care when it's needed most.</p>
+            <p>Our key support areas include</p>
+            <ul>
+                <li>Conflict resolution</li>
+                <li>Personal development</li>
+                <li>Life skills training</li>
+                <li>Emotional healing</li>
+            </ul>
+            </div>
+            <img src='https://media.istockphoto.com/id/1432916936/photo/female-psychologist-counseling-teenage-boy-in-office.webp?a=1&b=1&s=612x612&w=0&k=20&c=aVivRGshg5twR0GRGjhy99Ko_8FZWXyixEDe48a4s10=' />
+        </div>
+
+    </div>
+    </div>
+</div>
+  )
 }
 
-export default ProgrammesPage;
+export default ProgrammesPage
