@@ -6,6 +6,8 @@ import Donate from './Donate';
 import Visit from './Visit';
 import Review from './Review';
 import Gallery from './Gallery';
+import FundingGoal from './Fundinggoal';
+import ContactInfo from './Contactinfo';
 
 function HomeDetails() {
   const home = useSelector((state) => state.childHome.selectedHome);
@@ -63,6 +65,10 @@ function HomeDetails() {
         </div>
         <div className='homecontent2'>
             {renderContent()}
+        </div>
+        <div className='homecontent3'>
+            <FundingGoal />
+            <ContactInfo />
         </div>
       </div>
     </div>

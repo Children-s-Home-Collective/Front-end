@@ -11,7 +11,8 @@ function ProgrammesPage() {
         <p>We offer comprehensive programs designed to meet each child's unique needs and support their journey toward healing and growth.</p>
         </div>
         <div className='education'>
-            <div className='heading1'>
+            <div className='heading12'>
+                <div className='heading1'>
                  <img src='https://img.icons8.com/?size=50&id=41414&format=png' />
                  <h4>Education</h4>
             </div>   
@@ -25,10 +26,12 @@ function ProgrammesPage() {
                     <li>College</li>
                 </ul>
                 </div>
-                <img src='https://images.unsplash.com/photo-1607823477522-177cff8183d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNoaWxkcmVuJTIwcmVhZGluZyUyMGJvb2tzfGVufDB8MHwwfHx8MA%3D%3D' />
-            </div>         
+            </div>
+            </div>   
+             <img src='https://images.unsplash.com/photo-1607823477522-177cff8183d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNoaWxkcmVuJTIwcmVhZGluZyUyMGJvb2tzfGVufDB8MHwwfHx8MA%3D%3D' />      
         </div>
         <div className='nutrition'>
+           <div className='heading12'>
             <div className='heading1'>
                  <img src='https://img.icons8.com/?size=50&id=9731&format=png' />
                  <h4>Nutriton & health</h4>
@@ -45,12 +48,15 @@ function ProgrammesPage() {
                     <li>Education on healthy habits</li>
                 </ul>
                 </div>
-                <img src='https://plus.unsplash.com/premium_photo-1661265882566-3138962f933d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODF8fGNoaWxkcmVuJTIwcmVjZWl2aW5nJTIwaGVhbHRoJTIwY2FyZXxlbnwwfDB8MHx8fDA%3D' />
+           </div>
+            
             </div>
+            <img src='https://plus.unsplash.com/premium_photo-1661265882566-3138962f933d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODF8fGNoaWxkcmVuJTIwcmVjZWl2aW5nJTIwaGVhbHRoJTIwY2FyZXxlbnwwfDB8MHx8fDA%3D' />
 
         </div>
          <div className='family'>
-            <div className='heading1'>
+            <div className='heading12'>
+                <div className='heading1'>
                  <img src='https://img.icons8.com/?size=50&id=8902&format=png' />
                  <h4>Family Reunification</h4>
             </div>   
@@ -67,12 +73,15 @@ function ProgrammesPage() {
                 </ul>
                 </div>
 
-                <img src='https://images.unsplash.com/photo-1529180979161-06b8b6d6f2be?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGZhbWlseXxlbnwwfDB8MHx8fDA%3D' />
             </div>
+            
+            </div>
+            <img src='https://images.unsplash.com/photo-1529180979161-06b8b6d6f2be?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGZhbWlseXxlbnwwfDB8MHx8fDA%3D' />
 
         </div>
         <div className='guidance'>
-            <div className='heading1'>
+            <div className='heading12'>
+                <div className='heading1'>
                  <img src='https://img.icons8.com/?size=80&id=AM5Js7op4Qct&format=png' />
                  <h4>Counselling and Guiding</h4>
             </div>   
@@ -88,8 +97,10 @@ function ProgrammesPage() {
                     <li>Emotional healing</li>
                 </ul>
                 </div>
-                <img src='https://media.istockphoto.com/id/1432916936/photo/female-psychologist-counseling-teenage-boy-in-office.webp?a=1&b=1&s=612x612&w=0&k=20&c=aVivRGshg5twR0GRGjhy99Ko_8FZWXyixEDe48a4s10=' />
             </div>
+            
+            </div>
+                <img src='https://media.istockphoto.com/id/1432916936/photo/female-psychologist-counseling-teenage-boy-in-office.webp?a=1&b=1&s=612x612&w=0&k=20&c=aVivRGshg5twR0GRGjhy99Ko_8FZWXyixEDe48a4s10=' />
 
         </div>
         </div>

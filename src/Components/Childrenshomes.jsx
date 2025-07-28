@@ -67,7 +67,7 @@ function Childrenshomes() {
               </section>
               <p>{dats.description}</p>
             </div>
-            <button onClick={() => handleViewDetails(dats)}>View more details<img src='https://img.icons8.com/?size=64&id=S6Q4NFBbHlSg&format=png'/></button>
+            <button onClick={() => handleViewDetails(dats)}>View more details<img src='https://img.icons8.com/?size=50&id=39969&format=png'/></button>
           </div>
         )}
       </div>

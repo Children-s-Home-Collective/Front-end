@@ -39,7 +39,7 @@ body, .dropdown button{
 .logincard{
   border: 2px solid black;
   width: 900px;
-  height: 410px;
+  height: auto;
   display: flex;
   justify-content: center;
   margin: 20px auto ;
@@ -512,7 +512,7 @@ em{
   border-bottom-right-radius: 25px;
   padding: 30px;
 }
-.visit,.donate,.aboutus,.gallery{
+.visit,.donate,.aboutus,.gallery,.reviews{
   background-color: #BFC2FA;
   width: 1000px;
   height: 300px;
@@ -544,8 +544,19 @@ em{
 }
 .donate img{
   width: 40px;
-  height: 50px;
+  height: auto;
 }
 .donate button{
   margin: 0px ;
+}
+.homecontent3{
+  display: flex;
+  justify-content: space-around;
+  width: 1000px;
+  height: auto;
+}
+.reviews{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
