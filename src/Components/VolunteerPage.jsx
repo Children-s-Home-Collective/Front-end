@@ -51,7 +51,7 @@ const handleSubmit = async () => {
       const res = await fetch('https://back-end-1-wour.onrender.com/volunteers/', {
         method: 'POST',
         headers: {
-          Authorization: `Bearer ${token}`,
+          'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(payload),
