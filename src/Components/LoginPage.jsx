@@ -8,7 +8,8 @@ const LoginPage = () => {
   const [isLogin, setIsLogin] = useState(true);
   const navigate = useNavigate();
 
-  const toggleForm = () => setIsLogin(!isLogin);
+  const toggleForm = (resetForm) => {setIsLogin(!isLogin);
+    resetForm()};
 
   // Yup validation schemas
   const LoginSchema = Yup.object().shape({
@@ -17,7 +18,7 @@ const LoginPage = () => {
   });
 
   const SignupSchema = Yup.object().shape({
-    username: Yup.string().min(3, 'Too short!').required('Required'),
+    name: Yup.string().min(3, 'Too short!').required('Required'),
     email: Yup.string().email('Invalid email').required('Required'),
     password: Yup.string().min(4, 'Too short!').required('Required'),
   });
@@ -29,8 +30,8 @@ const LoginPage = () => {
         : values;
 
       const url = isLogin
-        ? 'https://shop-swift-back-end-6.onrender.com/api/login'
-        : 'https://shop-swift-back-end-6.onrender.com/api/register';
+        ? 'https://back-end-1-wour.onrender.com/auth/login'
+        :'https://back-end-1-wour.onrender.com/users/register';
 
       const res = await axios.post(url, payload);
 
@@ -44,7 +45,7 @@ const LoginPage = () => {
         localStorage.setItem('user', JSON.stringify(res.data.user));
       }
 
-      navigate('/mainpage');
+      navigate('/homepage');
     } catch (err) {
       setErrors({
         email: err.response?.data?.error || 'Invalid credentials or user already exists',
@@ -81,7 +82,7 @@ const LoginPage = () => {
           </h2>
 
           <Formik
-            initialValues={{ username: '', email: '', password: '' }}
+            initialValues={{ name: '', email: '', password: '' }}
             validationSchema={isLogin ? LoginSchema : SignupSchema}
             onSubmit={handleSubmit}
           >
@@ -91,8 +92,8 @@ const LoginPage = () => {
                   <div>
                     <Field
                       type="text"
-                      name="username"
-                      placeholder="Username"
+                      name="name"
+                      placeholder="name"
                       className="border border-gray-300 rounded-md px-4 py-2"
                     />
                     <ErrorMessage name="username" component="div" className="text-red-500 text-sm" />

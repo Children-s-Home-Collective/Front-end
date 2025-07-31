@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 
-function Visit() {
+function Visit({ homeid }) {
   const [visitData, setVisitData] = useState({
-    day: '',
-    visitors: '',
-    name: '',
-    phone: ''
+    day_to_visit: '',
+    number_of_visitors: '',
+    full_name: '',
+    phone_number: '',
+    home_id: homeid 
   });
 
   const handleChange = (e) => {
@@ -16,20 +17,22 @@ function Visit() {
     }));
   };
 
-  const handleSubmit = async () => {
-    const { day, visitors, name, phone } = visitData;
+  const token = localStorage.getItem('access_token');
 
-    
-    if (!day || !visitors || !name || !phone) {
+  const handleSubmit = async () => {
+    const { day_to_visit, number_of_visitors, full_name, phone_number } = visitData;
+
+    if (!day_to_visit || !number_of_visitors || !full_name || !phone_number) {
       alert('Please fill in all fields.');
       return;
     }
 
     try {
-      const response = await fetch('https://your-api.com/visits', {
+      const response = await fetch('https://back-end-1-wour.onrender.com/visitor/', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
         },
         body: JSON.stringify(visitData)
       });
@@ -40,12 +43,12 @@ function Visit() {
       alert('Visit successfully scheduled!');
       console.log(result);
 
-      
       setVisitData({
-        day: '',
-        visitors: '',
-        name: '',
-        phone: ''
+        day_to_visit: '',
+        number_of_visitors: '',
+        full_name: '',
+        phone_number: '',
+        home_id: homeid 
       });
     } catch (error) {
       console.error('Error:', error);
@@ -56,57 +59,56 @@ function Visit() {
   return (
     <div className='visit'>
       <div className='visit1'>
-         <img src='https://img.icons8.com/?size=48&id=Mjt9Tkm04cgv&format=png' />
-         <p>Plan a Visit to our children’s home</p>
+        <img src='https://img.icons8.com/?size=48&id=Mjt9Tkm04cgv&format=png' alt="visit" />
+        <p>Plan a Visit to our children’s home</p>
       </div>
-     <div className='visitform'>
-      <div className='visitday'>
-        <label>Day of Visit: </label>
-        <input
-          type="date"
-          name="day"
-          value={visitData.day}
-          onChange={handleChange}
-          required
-        />
+      <div className='visitform'>
+        <div className='visitday'>
+          <label>Day of Visit: </label>
+          <input
+            type="date"
+            name="day_to_visit"
+            value={visitData.day_to_visit}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div className='visitors'>
+          <label>Number of Visitors: </label>
+          <input
+            type="number"
+            name="number_of_visitors"
+            value={visitData.number_of_visitors}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div className='username'>
+          <label>Your Name: </label>
+          <input
+            type="text"
+            name="full_name"
+            value={visitData.full_name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div className='phonenumber'>
+          <label>Phone Number: </label>
+          <input
+            type="tel"
+            name="phone_number"
+            value={visitData.phone_number}
+            onChange={handleChange}
+            required
+          />
+        </div>
       </div>
 
-      <div className='visitors'>
-        <label>Number of Visitors: </label>
-        <input
-          type="number"
-          name="visitors"
-          value={visitData.visitors}
-          onChange={handleChange}
-          required
-        />
-      </div>
-
-      <div className='username'>
-        <label>Your Name: </label>
-        <input
-          type="text"
-          name="name"
-          value={visitData.name}
-          onChange={handleChange}
-          required
-        />
-      </div>
-
-      <div className='phonenumber'>
-        <label>Phone Number: </label>
-        <input
-          type="tel"
-          name="phone"
-          value={visitData.phone}
-          onChange={handleChange}
-          required
-        />
-      </div>
-
-      
-      </div>
-      <button onClick={handleSubmit}> Request Visit </button>
+      <button onClick={handleSubmit}>Request Visit</button>
     </div>
   );
 }

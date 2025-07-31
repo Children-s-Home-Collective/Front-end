@@ -1,19 +1,29 @@
 import React, { useEffect, useState } from 'react';
 
-const FundingGoal = () => {
+const FundingGoal = ({ homeid }) => {
   const [totalContributed, setTotalContributed] = useState(null);
   const monthlyExpenses = 50000;
 
   useEffect(() => {
-    // Replace this URL with your actual API endpoint
-    fetch('https://api.example.com/funding/total-contributed')
-      .then(response => response.json())
+    const token = localStorage.getItem('access_token');
+
+    fetch(`https://back-end-1-wour.onrender.com/donations/home/${homeid}`, {
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type':'application/json'
+      }
+    })
+      .then(response => {
+        if (!response.ok) throw new Error('Failed to fetch donations');
+        return response.json();
+      })
       .then(data => {
-        setTotalContributed(data.total); // Assume the API returns: { total: 43000 }
+        const total = data.reduce((sum, donation) => sum + (donation.amount || 0), 0);
+        setTotalContributed(total);
       })
       .catch(error => {
-        console.error('Error fetching funding data:', error);
-        setTotalContributed(0); // fallback
+        console.error('Error fetching donation data:', error);
+        setTotalContributed(0);
       });
   }, []);
 
@@ -30,7 +40,7 @@ const FundingGoal = () => {
       width: '400px',
       backgroundColor: '#EEECFB',
       padding: '20px',
-      border:'2px solid black',
+      border: '2px solid black',
       borderRadius: '10px',
       fontFamily: 'sans-serif',
       color: '#333'

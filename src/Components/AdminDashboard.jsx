@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import UsersManagement from './UsersManagement';
+import UserManagement from './UserManagement';
 import HomesManagement from './HomesManagement';
 import VolunteersManagement from './VolunteersManagement';
-import AdminsManagement from './AdminsManagement';
+import DonationsManagement from './DonationsManagement';
+import VisitorsManagement from './VisitorsManagement';
+import ReviewsManagement from './ReviewsManagement';
 
 const AdminDashboard = () => {
   const [activeTab, setActiveTab] = useState('users');
@@ -15,14 +17,18 @@ const AdminDashboard = () => {
         <button onClick={() => setActiveTab('users')}>Users</button>
         <button onClick={() => setActiveTab('homes')}>Children's Homes</button>
         <button onClick={() => setActiveTab('volunteers')}>Volunteers</button>
-        <button onClick={() => setActiveTab('admins')}>Admins</button>
+        <button onClick={() => setActiveTab('donations')}>Donations</button>
+        <button onClick={() => setActiveTab('visits')}>Visitors</button>
+        <button onClick={() => setActiveTab('reviews')}>Reviews</button>
       </nav>
 
       <div>
-        {activeTab === 'users' && <UsersManagement />}
+        {activeTab === 'users' && <UserManagement />}
         {activeTab === 'homes' && <HomesManagement />}
         {activeTab === 'volunteers' && <VolunteersManagement />}
-        {activeTab === 'admins' && <AdminsManagement />}
+        {activeTab=== 'donations' && <DonationsManagement />}
+        {activeTab=== 'visits' && <VisitorsManagement />}
+        {activeTab=== 'reviews' && <ReviewsManagement />}
       </div>
     </div>
   );
