@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-function Review({ name }) {
-  const [matchingReview, setMatchingReview] = useState(null);
+function Review({ name, homeid }) {
+  const [reviews, setReviews] = useState([]);
   const [showForm, setShowForm] = useState(false);
   const [rating, setRating] = useState('');
   const [comment, setComment] = useState('');
@@ -9,26 +9,30 @@ function Review({ name }) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchReviews = async () => {
-      try {
-        const response = await fetch('https://your-api.com/reviews');
-        if (!response.ok) throw new Error('Failed to fetch reviews');
-
-        const data = await response.json();
-
-        const match = data.find((review) => review.name === name);
-        setMatchingReview(match || null);
-      } catch (err) {
-        setError(err.message);
-      } finally {
+    const token = localStorage.getItem('access_token');
+    fetch(`https://back-end-1-wour.onrender.com/reviews/home/${homeid}`, {
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to fetch');
+        return res.json();
+      })
+      .then(data => {
+        setReviews(data);
         setLoading(false);
-      }
-    };
+      })
+      .catch(err => {
+        console.error(err);
+        setError('Something went wrong while fetching data.');
+        setLoading(false);
+      });
+  }, [homeid]);
 
-    fetchReviews();
-  }, [name]);
   const toggleForm = () => {
-    setShowForm((prev) => !prev);
+    setShowForm(prev => !prev);
   };
 
   const handleSubmit = async (e) => {
@@ -38,16 +42,21 @@ function Review({ name }) {
       return;
     }
 
-  const newReview = { name, rating, comment };
+    const newReview = {  rating, comment,  home_id: homeid   };
+    const token = localStorage.getItem('access_token');
 
     try {
-       const response = await fetch('https://your-api.com/reviews', {
+      const response = await fetch(`https://back-end-1-wour.onrender.com/reviews/`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(newReview)
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },
+        body: JSON.stringify(newReview),
       });
 
       if (!response.ok) throw new Error('Failed to submit review');
+
       alert('Thank you for your review!');
       setShowForm(false);
       setRating('');
@@ -57,23 +66,29 @@ function Review({ name }) {
     }
   };
 
-
-  if (loading) return <p>Loading review...</p>;
+  if (loading) return <p>Loading reviews...</p>;
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div>
-        <button>Add review<img src='https://img.icons8.com/?size=30&id=60953&format=png' /></button>
-      {matchingReview ? (
-        <div className='review'>
-          <h3>Review for {matchingReview.name}</h3>
-          <p><strong>Rating:</strong> {matchingReview.rating} / 5</p>
-          <p><strong>Comment:</strong> {matchingReview.comment}</p>
-        </div>
+    <div className='reviews'>
+      <button onClick={toggleForm}>
+        {showForm ? 'Cancel' : 'Add Review'}
+        <img src='https://img.icons8.com/?size=30&id=60953&format=png' alt='review icon' />
+      </button>
+
+      {!showForm ? (
+        reviews.length > 0 ? (
+          reviews.map((review, index) => (
+            <div className='review' key={index}>
+              <p><strong>Reviewer:</strong> {review.userName || 'Anonymous'}</p>
+              <p><strong>Rating:</strong> {review.rating} / 5</p>
+              <p><strong>Comment:</strong> {review.comment}</p>
+            </div>
+          ))
+        ) : (
+          <p>No review found for this children's home.</p>
+        )
       ) : (
-        <p>No review found </p>
-      )}
-      {showForm && (
         <form onSubmit={handleSubmit} style={{ marginTop: '15px' }}>
           <div style={{ marginBottom: '10px' }}>
             <label>Rating (1–5): </label>
@@ -96,7 +111,7 @@ function Review({ name }) {
               required
             />
           </div>
-          <button onClick={toggleForm}type="submit">Submit Review</button>
+          <button type="submit">Submit Review</button>
         </form>
       )}
     </div>

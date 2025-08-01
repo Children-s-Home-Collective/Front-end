@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 
-function Donate() {
+function Donate({homeid}) {
   const [selected, setSelected] = useState('');
   const [amount, setAmount] = useState('');
 
@@ -9,20 +9,23 @@ function Donate() {
   };
 
   const handleSubmit = async () => {
+    const token = localStorage.getItem('access_token');
     if (!selected || !amount) {
       alert("Please select a donation type and enter an amount.");
       return;
     }
 
     const donationData = {
-      type: selected,
+      donation_type: selected,
       amount: parseFloat(amount),
+      home_id:homeid,
     };
     try {
-      const response = await fetch('https://your-api.com/donations', {
+      const response = await fetch('https://back-end-1-wour.onrender.com/donations/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
         },
         body: JSON.stringify(donationData),
       });
