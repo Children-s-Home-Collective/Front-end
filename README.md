@@ -1,72 +1,167 @@
-# Getting Started with Create React App
+Children’s Home Collective — Frontend
+A React-based frontend for a platform that connects users with trusted children’s homes. The app allows for donations, volunteering, reviews, and user management through a user-friendly interface.
 
-Welcome to my project 
+🚀 Features
+User authentication (login/signup)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Volunteer sign-up form
 
-## Available Scripts
+Admin and user dashboards
 
-In the project directory, you can run:
+View and manage children’s homes
 
-### `npm start`
+Submit and view donations
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Submit and read reviews
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Image gallery and programme information
 
-### `npm test`
+Redux-based state management
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🛠 Technologies Used
+React 19+
 
-### `npm run build`
+Redux Toolkit & redux-persist
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+React Router DOM 7+
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Formik + Yup for form validation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Axios for API requests
 
-### `npm run eject`
+CSS Modules 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+JWT Auth integration
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Backend: Python/Flask (hosted at https://back-end-1-wour.onrender.com)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+📁 Project Structure
+src/
+│
+├── Components/
+│   ├── About.jsx
+│   ├── Account.jsx
+│   ├── AdminDashboard.jsx
+│   ├── Childrenshomes.jsx
+│   ├── Contactinfo.jsx
+│   ├── Donate.jsx
+│   ├── DonationsManagement.jsx
+│   ├── Fundinggoal.jsx
+│   ├── Gallery.jsx
+│   ├── Header.jsx
+│   ├── HomeDetails.jsx
+│   ├── HomePage.jsx
+│   ├── HomesManagement.jsx
+│   ├── LoginPage.jsx
+│   ├── LogoutButton.jsx
+│   ├── Managesystem.jsx
+│   ├── Navigationbar.jsx
+│   ├── Profilepage.jsx
+│   ├── ProgrammesPage.jsx
+│   ├── Review.jsx
+│   ├── ReviewsManagement.jsx
+│   ├── UserManagement.jsx
+│   ├── Visit.jsx
+│   ├── VisitorsManagement.jsx
+│   ├── VolunteerPage.jsx
+│   ├── VolunteersManagement.jsx
+│
+├── app/
+│   └── store.js
+│
+├── features/
+│   └── childHomeSlice.js
+│
+├── Images/
+│   └── content1.avif
+│
+├── App.jsx
+├── App.css
+├── index.js
+├── index.css
+├── reportWebVitals.js
+└── setupTests.js
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+🔧 Setup Instructions
+1)Clone the Repository:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+git clone https://github.com/your-username/childrenshomeapp.git
+cd childrenshomeapp
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+2)Install Dependencies:
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+npm install
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+3)Run the App:
+
+
+npm start
+
+
+
+
+4)Build for Production:
+
+
+npm run build
+
+
+
+
+
+
+🔐 Environment Variables
+
+
+REACT_APP_BACKEND_URL=https://back-end-1-wour.onrender.com
+
+
+📡 API Endpoints (Backend)
+POST /auth/login – Login
+
+POST /users/register – Register
+
+GET /homes/ – Fetch all children’s homes
+
+POST /volunteers/ – Register a volunteer
+
+POST /donations/ – Make a donation
+
+POST /reviews/ – Submit a review
+
+Make sure to pass JWT tokens for protected routes.
+
+👤 Roles & Access
+Admin:
+
+Manages homes, users, reviews, and volunteers
+
+Example admin: email="arnold.maruti@gmail.com"  password="Arnold!444"
+
+User:
+
+Views content, volunteers, donates, submits reviews
+
+
+Example user:   email"emma.davis@gmail.com"   passwords="Emma#9876"
+
+<!-- 🧪 Running Tests
+npm test
+Uses React Testing Library. -->
+
+📝 License
+MIT License © 2025 – [Arnold Maruti]
+
