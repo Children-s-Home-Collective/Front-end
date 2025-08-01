@@ -549,3 +549,539 @@ em{
 .donate button{
   margin: 0px ;
 }
+
+/* Phones (max-width: 576px) */
+@media (max-width: 576px) {
+  .logincard {
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .loginimage, .loginform {
+    min-width: 100%;
+    max-width: 100%;
+    height: 200px;
+  }
+
+  .loginblock {
+    min-width: 90%;
+    max-width: 100%;
+    margin: 0 10px;
+  }
+
+  .loginimage p {
+    min-width: 80%;
+    max-width: 100px;
+    margin: 20px 10px;
+    font-size: medium;
+  }
+
+  .content1 {
+    min-width: 90%;
+    max-width: 100%;
+    height: 400px;
+    margin: 10px;
+    padding: 0 20px;
+  }
+
+  .line1, .line2 {
+    min-width: 90%;
+    max-width: 100%;
+    flex-direction: column;
+    margin: 0 20px;
+  }
+
+  .imageline1, .line2 img {
+    min-width: 90%;
+    max-width: 100%;
+  }
+
+  .homes {
+    min-width: 90%;
+    max-width: 100%;
+    margin: 10px;
+  }
+
+  .singlehome {
+    min-width: 90%;
+    max-width: 100%;
+  }
+
+  .content4 {
+    min-width: 90%;
+    max-width: 100%;
+    flex-direction: column;
+    margin: 0 10px;
+  }
+
+  .content4 div {
+    min-width: 90%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .navbar {
+    min-width: 90%;
+    max-width: 100%;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .visit, .donate, .aboutus, .gallery {
+    min-width: 90%;
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  .visit button, .donate button {
+    min-width: 80%;
+    max-width: 100%;
+    margin: 0 10px;
+  }
+
+  .footer {
+    min-width: 90%;
+    max-width: 100%;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .volunteerbox {
+    min-width: 90%;
+    max-width: 100%;
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .volunteerright {
+    min-width: 90%;
+    max-width: 100%;
+    margin: 10px;
+  }
+
+  .content2 {
+    min-width: 90%;
+    max-width: 100%;
+    margin: 20px;
+  }
+
+  .content3 {
+    min-width: 90%;
+    max-width: 100%;
+    margin: 0 10px;
+  }
+
+  .lefttext {
+    min-width: 90%;
+    max-width: 100%;
+    margin: 20px 0;
+  }
+
+  .righttext {
+    min-width: 90%;
+    max-width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  .profile-card {
+    min-width: 90%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .account-container {
+    min-width: 90%;
+    max-width: 100%;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .leftsetting {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .rightsetting {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .dropdown {
+    min-width: 90%;
+    max-width: 100%;
+  }
+
+  .dropdown-menu {
+    min-width: 90%;
+    max-width: 150px;
+    left: -40px;
+  }
+
+  .visitform {
+    min-width: 90%;
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .notice, button, input {
+    min-width: 80%;
+    max-width: 200px;
+  }
+
+  .education, .nutrition, .family, .guidance {
+    min-width: 90%;
+    max-width: 100%;
+  }
+
+  .homecontent1 ul {
+    min-width: 90%;
+    max-width: 100%;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .visit1, .donate {
+    min-width: 90%;
+    max-width: 100%;
+  }
+}
+
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .logincard {
+    min-width: 90%;
+    max-width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .loginimage, .loginform {
+    min-width: 90%;
+    max-width: 100%;
+    height: 250px;
+  }
+
+  .loginblock {
+    min-width: 85%;
+    max-width: 100%;
+    margin: 0 20px;
+  }
+
+  .loginimage p {
+    min-width: 80%;
+    max-width: 100px;
+    margin: 30px 20px;
+    font-size: large;
+  }
+
+  .content1 {
+    min-width: 85%;
+    max-width: 100%;
+    height: 500px;
+    margin: 20px;
+    padding: 0 50px;
+  }
+
+  .line1, .line2 {
+    min-width: 85%;
+    max-width: 100%;
+    margin: 0 50px;
+  }
+
+  .imageline1, .line2 img {
+    min-width: 200px;
+    max-width: 250px;
+  }
+
+  .homes {
+    min-width: 85%;
+    max-width: 100%;
+    margin: 20px;
+  }
+
+  .singlehome {
+    min-width: 40%;
+    max-width: 45%;
+  }
+
+  .content4 {
+    min-width: 85%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    margin: 0 20px;
+  }
+
+  .content4 div {
+    min-width: 40%;
+    max-width: 45%;
+    margin-bottom: 20px;
+  }
+
+  .navbar {
+    min-width: 85%;
+    max-width: 100%;
+    padding: 10px 15px;
+  }
+
+  .visit, .donate, .aboutus, .gallery {
+    min-width: 85%;
+    max-width: 100%;
+    margin: 20px 0;
+  }
+
+  .visit button, .donate button {
+    min-width: 80%;
+    max-width: 100%;
+    margin: 0 150px;
+  }
+
+  .footer {
+    min-width: 85%;
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .volunteerbox {
+    min-width: 85%;
+    max-width: 100%;
+    margin: 10px 20px;
+  }
+
+  .content2 {
+    min-width: 85%;
+    max-width: 100%;
+    margin: 20px 200px;
+  }
+
+  .content3 {
+    min-width: 85%;
+    max-width: 100%;
+    margin: 0 50px;
+  }
+
+  .lefttext {
+    min-width: 85%;
+    max-width: 90%;
+    margin: 20px 0;
+  }
+
+  .righttext {
+    min-width: 85%;
+    max-width: 90%;
+    margin: 0 0 20px 0;
+  }
+
+  .profile-card {
+    min-width: 85%;
+    max-width: 90%;
+    height: auto;
+  }
+
+  .account-container {
+    min-width: 85%;
+    max-width: 100%;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .leftsetting {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .rightsetting {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .dropdown {
+    min-width: 90%;
+    max-width: 100%;
+  }
+
+  .dropdown-menu {
+    min-width: 90%;
+    max-width: 150px;
+    left: -20px;
+  }
+
+  .visitform {
+    min-width: 85%;
+    max-width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .notice, button, input {
+    min-width: 80%;
+    max-width: 200px;
+  }
+
+  .education, .nutrition, .family, .guidance {
+    min-width: 85%;
+    max-width: 100%;
+  }
+
+  .homecontent1 ul {
+    min-width: 85%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+
+  .visit1, .donate {
+    min-width: 85%;
+    max-width: 100%;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .logincard {
+    min-width: 80%;
+    max-width: 900px;
+  }
+
+  .loginblock {
+    min-width: 80%;
+    max-width: 400px;
+  }
+
+  .content1 {
+    min-width: 80%;
+    max-width: 1100px;
+    height: 600px;
+    margin: 20px 100px;
+    padding: 0 50px;
+  }
+
+  .line1, .line2 {
+    min-width: 80%;
+    max-width: 100%;
+    margin: 0 100px;
+  }
+
+  .imageline1, .line2 img {
+    min-width: 300px;
+    max-width: 350px;
+  }
+
+  .homes {
+    min-width: 80%;
+    max-width: 1400px;
+    margin: 20px 100px;
+  }
+
+  .singlehome {
+    min-width: 40%;
+    max-width: 500px;
+  }
+
+  .content4 {
+    min-width: 80%;
+    max-width: 100%;
+    margin: 0 50px;
+  }
+
+  .content4 div {
+    min-width: 25%;
+    max-width: 310px;
+  }
+
+  .navbar {
+    min-width: 80%;
+    max-width: 100%;
+  }
+
+  .visit, .donate, .aboutus, .gallery {
+    min-width: 80%;
+    max-width: 1000px;
+  }
+
+  .visit button, .donate button {
+    min-width: 80%;
+    max-width: 300px;
+  }
+
+  .footer {
+    min-width: 80%;
+    max-width: 100%;
+  }
+
+  .volunteerbox {
+    min-width: 80%;
+    max-width: 100%;
+    margin: 10px 50px;
+  }
+
+  .content2 {
+    min-width: 80%;
+    max-width: 100%;
+    margin: 20px 300px;
+  }
+
+  .content3 {
+    min-width: 80%;
+    max-width: 100%;
+    margin: 0 100px;
+  }
+
+  .lefttext {
+    min-width: 80%;
+    max-width: 850px;
+  }
+
+  .righttext {
+    min-width: 80%;
+    max-width: 800px;
+  }
+
+  .profile-card {
+    min-width: 80%;
+    max-width: 900px;
+  }
+
+  .account-container {
+    min-width: 80%;
+    max-width: 100%;
+  }
+
+  .dropdown {
+    min-width: 80%;
+    max-width: 100%;
+  }
+
+  .dropdown-menu {
+    min-width: 90%;
+    max-width: 150px;
+  }
+
+  .visitform {
+    min-width: 80%;
+    max-width: 100%;
+  }
+
+  .notice, button, input {
+    min-width: 80%;
+    max-width: 200px;
+  }
+
+  .education, .nutrition, .family, .guidance {
+    min-width: 80%;
+    max-width: 900px;
+  }
+
+  .homecontent1 ul {
+    min-width: 80%;
+    max-width: 100%;
+  }
+
+  .visit1, .donate {
+    min-width: 80%;
+    max-width: 100%;
+  }
+}
+
+
